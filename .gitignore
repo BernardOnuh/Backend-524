@@ -1,5 +1,8 @@
 node_modules
-.env
+!.env.example
+!.env.development
+!.env.production
+!.env.test
 dist
 logs/
 postgres/
@@ -11,3 +14,4 @@ CLAUDE.md
 plan.md
 tasks/
 fix.md
+config.bat
