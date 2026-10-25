@@ -81,12 +81,10 @@ router.post(
 
     const linkedError = await validateChannelsLinked(userId, channels)
     if (linkedError) {
-      return res
-        .status(400)
-        .json({
-          error: 'Validation failed',
-          details: [{ message: linkedError }],
-        })
+      return res.status(400).json({
+        error: 'Validation failed',
+        details: [{ message: linkedError }],
+      })
     }
 
     const existing = await db.digestSubscription.findFirst({
@@ -179,12 +177,10 @@ router.patch(
     const nextChannels = req.body.channels ?? existing.channels
     const linkedError = await validateChannelsLinked(userId, nextChannels)
     if (linkedError) {
-      return res
-        .status(400)
-        .json({
-          error: 'Validation failed',
-          details: [{ message: linkedError }],
-        })
+      return res.status(400).json({
+        error: 'Validation failed',
+        details: [{ message: linkedError }],
+      })
     }
 
     const updated = await db.digestSubscription.update({

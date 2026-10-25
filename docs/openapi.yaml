@@ -978,6 +978,7 @@ components:
           minimum: 0
           maximum: 6
         quietHours:
+          type: object
           allOf:
             - $ref: '#/components/schemas/DigestQuietHours'
           nullable: true
