@@ -1,6 +1,4 @@
 node_modules
-.env
-.env.*
 !.env.example
 !.env.development
 !.env.production
@@ -16,3 +14,4 @@ CLAUDE.md
 plan.md
 tasks/
 fix.md
+config.bat
